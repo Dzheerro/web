@@ -1,0 +1,466 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  :root {
+    --main-color: hsla(51, 100%, 76%, 0.3);
+  }
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 50px;
+}
+.menu-icon{
+    width: 25px;
+    cursor: pointer;
+    display: none;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 16px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ffe600;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 25px 0;
+
+}
+.col-1{
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 100px;
+}
+.col-1 h2{
+    font-size: 70px;
+}
+.col-1 p{
+    font-size: 16px;
+    color: #707070;
+    font-weight: 300;
+    z-index: 1;
+}
+
+.col-1::after{
+    content: '';
+    width: 10px;
+    height: 57%;
+    background: linear-gradient(hsl(54, 68%, 60%), rgba(255, 241, 113, 0.3), hsl(54, 74%, 62%));
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+
+.col-2{
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.col-2 .controller{
+    width: 90%;
+    z-index: 1;
+}
+.color-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color:hsl(0, 0%, 0%);
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    width: 81%;
+    transform: translateX(100px);
+}
+.house{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14vw; /* Розмір шрифту відсотками від ширини вікна */
+    line-height: 1.5;
+    align-items: center;
+    text-align: right;
+    right: 8%; /* Відступи від правого краю відсотками */
+    top: -9%; /* Відступи від верхнього краю відсотками */
+    color: rgba(195, 178, 25, 0.456);
+}
+
+.houses{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15vw; /* Розмір шрифту відсотками від ширини вікна */
+    line-height: 1.5;
+    align-items: center;
+    text-align: right;
+    right: 5%; /* Відступи від правого краю відсотками */
+    top: 25%; /* Відступи від верхнього краю відсотками */
+    color: rgba(45, 41, 7, 0.456);
+    z-index: 3;
+}
+.color-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color:hsla(51, 100%, 76%, 0.456);
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    width: 81%;
+    transform: translateX(100px);
+}
+
+@media only screen and (max-width:700px){
+    .nav-links ul{
+        width: 100%;
+        background-color: hsla(51, 100%, 76%, 0.923);
+        position: absolute;
+        top: 75px;
+        right: 0;
+        z-index: 4;
+        overflow: auto;
+       
+    }
+    .nav-links ul li{
+        display: block;
+        margin-top:10px;
+        margin-bottom: 10px;
+       
+    }
+    .nav-links ul li a{
+        color: #000;
+    }
+    .menu-icon{
+        display: block;
+
+    }
+    #menuList{
+        overflow: hidden;
+        transition: 0.7s;
+    }
+    .row{
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+  .col-2{
+    flex-basis: 100%;
+    margin-bottom: 50px;
+  }
+  .col-2 .controller{
+    width:77% ;
+  }
+  .color-box{
+    transform: translateX(10%);
+  }
+  .house {
+    font-size: 23vw; /* Розмір шрифту відсотками від ширини вікна */
+    right: 1%; /* Відступи від правого краю відсотками */
+    top: -10%; /* Відступи від верхнього краю відсотками */
+  }
+
+  .houses {
+    font-size: 25vw; /* Розмір шрифту відсотками від ширини вікна */
+    right: 1%; /* Відступи від правого краю відсотками */
+    top: 30%; /* Відступи від верхнього краю відсотками */
+  }
+  .col-1{
+    flex-basis: 100%;
+    margin-left: 50px;
+  }
+  .col-1 h2{
+    font-size: 35px;
+  }
+  .col-1 p{
+    font-size: 15px;
+  }
+}
+
+/*----- adventage ----*/
+.adventage{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: top 100px; 
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+p{
+    color:#777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+
+}
+.line{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.adventage-col{
+    flex-basis: 31%;
+    background: var(--main-color);
+    border-radius: 10px ;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.adventage-col:hover{
+    box-shadow: 0 0 20px 0px rgba(136, 123, 10, 0.684);
+}
+@media (max-width: 700px){
+    .line{
+        flex-direction: column;
+
+    }
+}
+/*----- compare ----*/
+
+.compare{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.compare-col{
+    flex: basis 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.compare-col img{
+    width: 100%;
+    display: block;
+}
+.layer{
+    background: transparent ;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background: rgba(136, 123, 10, 0.684) ;
+}
+.layer h3{
+    width:100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+/*----- reviews ----*/
+
+.reviews{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.reviews-col{
+   flex-basis: 44%;
+   border-radius:10px ;
+   margin-bottom: 5%; 
+   text-align: left;
+   background: var(--main-color) ;
+   padding: 25px;
+   cursor: pointer;
+   display: flex;
+}
+.reviews-col img{
+    height: 60px;
+    margin-left: 15px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.reviews-col p{
+    padding: 0;
+
+}
+.reviews-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+.reviews-col:hover{
+    box-shadow: 0 0 20px 0px rgba(136, 123, 10, 0.684);
+}
+@media (max-width: 700px){
+
+    .reviews-col img{
+        margin-left: 0px;
+        margin-right: 10px;
+    }
+    
+}
+/*----- cta ----*/
+.cta{
+    margin: 100px auto;
+width: 80%;
+background-image: linear-gradient(hsla(0, 0%, 21%, 0.63), hsla(0, 0%, 22%, 0.63),rgba(219, 216, 193, 0.3)), url(images/contact.jpg);
+background-position: center;
+background-size: cover;
+border-radius: 10px;
+text-align: center;
+padding: 100px 0;
+
+}
+.cta h1{
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid var(--main-color);
+    background: hsla(51, 77%, 29%, 0.3);
+    transition: 1s;
+}
+
+/*----- about ----*/
+.about{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.about h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.registration {
+    margin: 100px auto;
+    width: 50%;
+    background: var(--main-color);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .registration h1 {
+    text-align: center;
+  }
+  
+  .registration form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .registration label {
+    margin-bottom: 5px;
+  }
+  
+  .registration input[type="text"],
+  .registration input[type="email"],
+  .registration input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .hero-btnn{
+    display: inline-block;
+    text-decoration: none;
+    color: #000000;
+    border: 1px solid #000000;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btnn:hover{
+    border: 1px solid var(--main-color);
+    background: hsla(51, 91%, 44%, 0.781);
+    transition: 1s;
+}
+@media (max-width: 700px){
+
+    .registration {
+        margin: 100px auto;
+        width: 80%;
+      }
+      .registration h1 {
+       font-size: 200%;
+      }
+    
+}
+@media only screen and (max-width: 1424px) {
+    .header {
+      min-height: 40vh; /* Зменшити висоту першого блоку на iPad */
+    }
+  }
